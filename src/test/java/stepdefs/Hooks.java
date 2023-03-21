@@ -3,13 +3,16 @@ package stepdefs;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
 import utilities.ConfigReader;
 import utilities.DBUtils;
 import utilities.DriverUtilities;
 import utilities.Screenshot;
 
 public class Hooks {
-    @Before
+
+    @Before ()
     // adding the cucumber Scenario parameter, which will hold the data for the scenario, which is currently running
     public void setUp (Scenario scenario) {
         // initializing "properties" Object, which is also inside the ConfigReader Class
